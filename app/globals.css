@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import '../src/styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: #FFFFFF;
+  background: #0D0F12;
+  font-family: "Michroma", "Orbitron", "Eurostile", "Inter", sans-serif;
+  line-height: 1.15;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0F12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2E38;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3E48;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(74, 164, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(74, 164, 255, 0.6);
+  }
+}
+
+@keyframes hologram {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    rgba(74, 164, 255, 0.1) 0%,
+    rgba(196, 123, 255, 0.1) 50%,
+    rgba(74, 164, 255, 0.1) 100%
+  );
+  background-size: 200% 200%;
+  animation: hologram 3s ease infinite;
+}
