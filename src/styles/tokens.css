@@ -1,0 +1,9 @@
+:root {
+  --panel-padding: 24px;
+  --panel-gap: 24px;
+  --inventory-cell: 96px;
+  --inventory-gap: 12px;
+  --stash-cell: 72px;
+  --stash-gap: 8px;
+}
+
